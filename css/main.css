@@ -1,22 +1,26 @@
 @import url('normalize.css');
 @import url('reset.css');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap');
 
 /*
 font-family: 'Alegreya Sans', sans-serif;
-font-family: 'Raleway', sans-serif; 
+font-family: 'Noto Serif KR', serif;
  */
 
 /* ---------------LAYOUT--------------- */
-body {
+body, .container {
     width: 100%;
     height: 100%;
     margin: 0 auto;
     color: #fff;
+    background: rgba(104, 116, 104, 0.637);
+}
+.shadow {
+    box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.658);
 }
 /* ---------------TYPOGRAPHY --------------- */
 body {
-    font: 16px/28px 'Raleway', sans-serif;
+    font: 18px/28px 'Noto Serif KR', serif;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Alegreya Sans', sans-serif;
@@ -32,7 +36,20 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     font-weight: bold;
     background: none;
-
+}
+a {
+    padding: 0 20px;
+    line-height: 30px;
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: rgba(44, 24, 63, 0.925);
+    border: 1px solid rgba(44, 24, 63, 0.925);
+    font-weight: bold;
 }
 /* ---------------FORM --------------- */
 label {
@@ -59,7 +76,7 @@ textarea {
 /* ---------------HEADER --------------- */
 header {
     height: 100vh;
-    background: url(/image/header_bg.jpg) no-repeat center top/cover;
+    background: url(../image/header_bg.jpg) no-repeat center top/cover;
     position: relative;
     margin: 0 auto;
 }
@@ -76,18 +93,18 @@ header #slogan {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 964px;
+    width: 50%;
     border: 10px solid #fff;
     text-align: center;
     box-sizing: border-box;
-    padding: 77px 0 90px;
-    color: #fff;
+    padding: 60px 70px 50px;
+    /* color: #fff; */
     z-index: 2;
 }
 header #slogan h1 {
-    font-size: 130px;
+    font-size: 100px;
     line-height: 110px;
-    margin-bottom: 56px;
+    margin-bottom: 20px;
     text-transform: uppercase;   
 }
 header #slogan p {
@@ -98,28 +115,26 @@ header #slogan p {
 /* ---------------ABOUT US --------------- */
 .about_us {
     height: 100vh;
-    width: 100vw;
-    background: url(/image/about_us.jpg) no-repeat center top/cover;
+    background: url(../image/about_us.jpg) no-repeat center top/cover;
     position: relative;
     margin: 0 auto;
 }
 .wrap {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     width: 100%;
-    background: rgba(162, 170, 161, 0.479);
+    background: rgba(162, 170, 161, 0.418);
     box-sizing: border-box;
     padding: 210px 0;
-    color: #fff;
     text-align: center;
 }
 .main-tt {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 1; 
     position: relative;
     margin-bottom: 32px;
+    z-index: 2;
 }
 .main-tt:after {
     content: " ";
@@ -134,7 +149,82 @@ header #slogan p {
 .about_us p {
     width: 470px;
     margin: 0 auto 28px;
+
 }
+/* ---------------PROGRAMS --------------- */
+.programs {
+    text-align: center;
+    padding: 150px 0;
+    background: url(../image/programs.jpg) no-repeat center top/cover;
+    position: relative;
+}
+.programs_bg {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(112, 114, 111, 0.377);
+    z-index: 1;
+}
+.programs ul {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    /* margin: 0 60px; */
+    /* color: black; */
+    z-index: 2;
+}
+.programs ul li {
+    width: 33.333%;
+    padding: 0 60px;
+    box-sizing: border-box;
+    float: left;    
+}
+.programs ul li:nth-child(2) {
+    position: relative;
+    top: 56px; /* = transform: translateY(56px); */
+}
+.programs ul li > img {
+    width: 100%;
+    margin-bottom: 28px;
+}
+.programs ul li h3 {
+    font-size: 22px;
+    position: relative;
+    margin-bottom: 25px;
+    font-family: 'Noto Serif KR', serif;
+    
+} 
+.programs ul li h3:after {
+    content: " ";
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 39px;
+    border: 1px solid #fff;
+}
+.programs ul li p {
+    margin-bottom: 23px;
+}
+.programs ul:after::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
 /* ---------------CONTACT --------------- */
+.contact {
+    text-align: center;
+    position: relative;
+    height: 100%;
+}
+.contact img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 
 /* ---------------FOOTER --------------- */
